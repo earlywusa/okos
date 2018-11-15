@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+<div class="col-xs-4 col-xs-offset-4">
+  <table class="table">
+  <tbody>
+    <tr>
+      <td><strong>Practitioner ID:</strong></td>
+      <td><%= @practitioner.prac_id %></td>
+    </tr>
+    <tr>
+      <td><strong>Title:</strong></td>
+      <td><%= @practitioner.title %></td>
+    </tr>
+    <tr>
+      <td><strong>First Name:</strong></td>
+      <td><%= @practitioner.first_name %></td>
+    </tr>
+    <tr>
+      <td><strong>Middle Name:</strong></td>
+      <td><%= @practitioner.middle_name %></td>
+    </tr>
+    <tr>
+      <td><strong>Last Name:</strong></td>
+      <td><%= @practitioner.last_name %></td>
+    </tr>
+    <tr>
+      <td><strong>Clinic Name:</strong></td>
+      <td><%= @practitioner.clinic_name %></td>
+    </tr>
+    <tr>
+      <td><strong>Email:</strong></td>
+      <td><%= @practitioner.email %></td>
+    </tr>
+    <tr>
+      <td><strong>Delivery Email:</strong></td>
+      <td><%= @practitioner.delivery_email %></td>
+    </tr>
+    <tr>
+      <td><strong>Comments:</strong></td>
+      <td><%= @practitioner.comment %></td>
+    </tr>
+  </tbody>
+
+  </table>
+  <!-- <%= link_to 'Edit', edit_practitioner_path(@practitioner) %> | -->
+  <%= link_to 'Back', practitioners_path %>
+
+</div>
