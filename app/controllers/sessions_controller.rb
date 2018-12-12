@@ -6,11 +6,15 @@ class SessionsController < ApplicationController
   def create
     prac = Practitioner.find_by(prac_id: params[:session][:prac_id])
     input_pw = params[:session][:password]
+    puts "prac information: #{prac.inspect}"
     if prac && check_password(prac.prac_id, input_pw)
       session[:prac_id] = prac.prac_id
       flash[:success] = "You have successfully logged in"
       redirect_to practitioner_path(prac)
     else
+      if ! prac
+        flash.now[:danger] = "Unrecoginized prac_id: #{params[:session][:prac_id]}"
+      end
       flash.now[:danger] = "Failed to login"
       render 'new'
     end

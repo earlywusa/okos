@@ -1,3 +1,6 @@
 <h1 align="center">New Order</h1>
-
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Hi <%= @prac.title  %> <%= @prac.first_name %></h4>
+  <p>Please select the kit order items below:</p>
+</div>
 <%= render 'form' %>
